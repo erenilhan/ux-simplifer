@@ -14,6 +14,13 @@ Applies world-class UX principles (Hick's Law, Miller's Law, progressive disclos
 
 ## Installation
 
+### Claude Code (plugin — recommended)
+
+```
+/plugin marketplace add erenilhan/ux-simplifer
+/plugin install ux-simplifier
+```
+
 ### Claude Code (global — all projects)
 
 ```bash
@@ -28,18 +35,6 @@ git clone https://github.com/erenilhan/ux-simplifer.git ~/.claude/skills/ux-simp
 mkdir -p .claude/skills
 git clone https://github.com/erenilhan/ux-simplifer.git .claude/skills/ux-simplifier
 ```
-
-### Claude Code (plugin)
-
-```
-/plugin marketplace add erenilhan/ux-simplifer
-```
-
-### Claude.ai (web)
-
-1. Download the [latest release](https://github.com/erenilhan/ux-simplifer/releases) as ZIP
-2. Go to **Settings → Customize → Skills**
-3. Click **"+" → Create skill** and upload the ZIP
 
 ### Cursor / GitHub Copilot / Other Agent Skills compatible tools
 
@@ -59,11 +54,17 @@ The skill triggers automatically based on context.
 ## Structure
 
 ```
-ux-simplifier/
-├── SKILL.md                    # Main instructions (scan → audit → refactor)
-└── references/
-    ├── principles.md           # UX laws + how top products apply them
-    └── patterns.md             # 10 refactor patterns with code examples
+├── .claude-plugin/
+│   └── marketplace.json          # Marketplace manifest for plugin install
+├── ux-simplifier/
+│   ├── .claude-plugin/
+│   │   └── plugin.json           # Plugin metadata
+│   └── skills/
+│       └── ux-simplifier/
+│           ├── SKILL.md          # Main instructions (scan → audit → refactor)
+│           └── references/
+│               ├── principles.md # UX laws + how top products apply them
+│               └── patterns.md   # 10 refactor patterns with code examples
 ```
 
 ## Supported Frameworks

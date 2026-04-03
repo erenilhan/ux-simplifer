@@ -1,0 +1,18 @@
+{
+  "name": "ux-simplifier",
+  "description": "Analyses any web project's UI complexity and directly refactors the code to reduce cognitive load. Applies UX principles (Hick's Law, Miller's Law, progressive disclosure) used by Stripe, Linear, Notion, and Vercel.",
+  "author": {
+    "name": "Eren Ilhan"
+  },
+  "repository": "https://github.com/erenilhan/ux-simplifer",
+  "license": "MIT",
+  "keywords": [
+    "ux",
+    "ui",
+    "simplification",
+    "cognitive-load",
+    "audit",
+    "refactor",
+    "progressive-disclosure"
+  ]
+}
